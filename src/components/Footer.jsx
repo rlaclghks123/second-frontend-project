@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Footer({ orderState }) {
+  const navigate = useNavigate();
   const [totalCnt, setTotalCnt] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [isPayment, setIsPayment] = useState(false);
+  const [loadPayment, setLoadPayment] = useState(false);
 
   useEffect(() => {
     setTotalCnt(() => orderState.map((item) => item.materialType).reduce((a, c) => a + c, 0));
@@ -22,6 +25,12 @@ function Footer({ orderState }) {
     });
   }, [totalPrice]);
 
+  const handlePayment = () => {
+    setLoadPayment(true);
+    setIsPayment(true);
+    navigate('/complete');
+  };
+
   return (
     <FooterWrapper>
       <OrderSummary>
@@ -31,8 +40,8 @@ function Footer({ orderState }) {
         <p>{`총 가격 : ${totalPrice.toLocaleString()}원`}</p>
       </OrderSummary>
       <div>
-        <Button $isPayment={isPayment} disabled={isPayment} onClick={() => console.log('oerder')}>
-          주문하기
+        <Button $isPayment={isPayment} disabled={isPayment} onClick={handlePayment}>
+          {loadPayment ? '로딩중...' : '주문하기'}
         </Button>
       </div>
     </FooterWrapper>

@@ -26,6 +26,7 @@ function OrderPage() {
             <LoadingWrapper>
               <LoadingSection>데이터를 읽어오던 중</LoadingSection>
               <LoadingSection>문제가 발생했습니다.</LoadingSection>
+              <LoadingSection>잠시 후 다시 시도해주세요.</LoadingSection>
             </LoadingWrapper>
           )}
 
