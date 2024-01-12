@@ -67,12 +67,10 @@ const FooterWrapper = styled.footer`
 `;
 
 const OrderSummary = styled.div`
-  width: 100%;
   display: flex;
   justify-content: end;
 
   p {
-    width: 166px;
     height: 26.242px;
     flex-shrink: 0;
 
