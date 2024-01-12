@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   justify-content: center;
 
   width: inherit;
-  height: inherit;
+  min-height: 864px;
 
   background-color: #000000;
 `;

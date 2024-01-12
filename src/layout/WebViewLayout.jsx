@@ -11,8 +11,6 @@ function WebViewLayout({ children }) {
 export default WebViewLayout;
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +18,6 @@ const Wrapper = styled.div`
 
 const CenterContentBox = styled.div`
   width: 350px;
-  height: 864px;
+  min-height: 864px;
   background-color: white;
 `;

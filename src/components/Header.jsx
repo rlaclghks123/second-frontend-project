@@ -13,7 +13,7 @@ export default Header;
 
 const HeaderWrapper = styled.header`
   position: fixed;
-  top: 1px;
+  top: 0px;
   z-index: 99;
 
   width: 350px;
