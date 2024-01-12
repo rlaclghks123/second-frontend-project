@@ -7,6 +7,7 @@ import { useRecoilState } from 'recoil';
 import { orderListAtom } from '../atoms/orderListAtom';
 import { useQuery } from 'react-query';
 import { orderList } from '../api/orderList';
+import OrderItem from '../components/OrderItem';
 
 function OrderPage() {
   const [orderState, setOrderState] = useRecoilState(orderListAtom);
@@ -25,16 +26,24 @@ function OrderPage() {
         <Main>
           {error && (
             <LoadingWrapper>
-              <Section>데이터를 읽어오던 중</Section>
-              <Section>문제가 발생했습니다.</Section>
+              <LoadingSection>데이터를 읽어오던 중</LoadingSection>
+              <LoadingSection>문제가 발생했습니다.</LoadingSection>
             </LoadingWrapper>
           )}
 
           {isLoading && (
             <LoadingWrapper>
-              <Section>목록을</Section>
-              <Section>불러오고 있습니다.</Section>
+              <LoadingSection>목록을</LoadingSection>
+              <LoadingSection>불러오고 있습니다.</LoadingSection>
             </LoadingWrapper>
+          )}
+
+          {!isLoading && (
+            <OrderItemWrapper>
+              {orderState.map((item) => (
+                <OrderItem key={item.id} {...item} />
+              ))}
+            </OrderItemWrapper>
           )}
         </Main>
       </Wrapper>
@@ -47,12 +56,14 @@ export default OrderPage;
 
 const Wrapper = styled.div`
   width: inherit;
-  height: inherit;
+  min-height: 864px;
 `;
 
 const Main = styled.main`
   width: inherit;
   height: inherit;
+  margin-top: 57px;
+  margin-bottom: 170px;
 `;
 
 const LoadingWrapper = styled.div`
@@ -61,11 +72,10 @@ const LoadingWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: inherit;
-  height: inherit;
+  min-height: 864px;
 `;
 
-const Section = styled.section`
+const LoadingSection = styled.section`
   width: 221px;
   height: 45px;
   flex-shrink: 0;
@@ -77,4 +87,10 @@ const Section = styled.section`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+`;
+
+const OrderItemWrapper = styled.ul`
+  width: 100%;
+  height: 100%;
+  padding: 5px 0px;
 `;
