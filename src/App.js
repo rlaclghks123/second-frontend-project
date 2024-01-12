@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import OrderPage from './pages/OrderPage';
 import CompletePage from './pages/CompletePage';
 import ErrorPage from './pages/ErrorPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path={'/order'} element={<OrderPage />} />
         <Route path={'/complete'} element={<CompletePage />} />
         <Route path={'/error'} element={<ErrorPage />} />
+        <Route path={'/*'} element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
