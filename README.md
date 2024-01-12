@@ -28,10 +28,87 @@
 
 - [x] complete
   - [x] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
-- [ ] error
-  - [ ] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
+- [x] error
+  - [x] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
 
-# 요구사항 선택
+# 선택 요구사항
 
-- 적절하게 컴포넌트를 나누어 주세요.
-- Typescript를 사용하셔도 됩니다. => react로만 구성
+- [x] 적절하게 컴포넌트를 나누어 주세요. [재활용 가능한 컴포넌트 구성](#재활용-가능한-컴포넌트-구성)
+
+# 프로젝트 구조
+
+```
+second-frontend-project
+├─ .gitignore
+├─ README.md
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ index.html
+│  ├─ manifest.json
+│  └─ robots.txt
+└─ src
+   ├─ App.js
+   ├─ App.test.js
+   ├─ GlobalStyle.jsx
+   ├─ index.js
+   ├─ setupTests.js
+   │
+   ├─ api
+   │  └─ orderList.js
+   │
+   ├─ db
+   │  └─ db.json
+   │
+   ├─ atoms
+   │  └─ orderListAtom.js
+   │
+   ├─ components
+   │  ├─ Footer.jsx
+   │  ├─ Header.jsx
+   │  ├─ MessageDisplay.jsx
+   │  └─ OrderItem.jsx
+   │
+   ├─ layout
+   │  └─ WebViewLayout.jsx
+   │
+   ├─ pages
+   │  ├─ CompletePage.jsx
+   │  ├─ ErrorPage.jsx
+   │  ├─ HomePage.jsx
+   │  ├─ NotFoundPage.jsx
+   │  └─ OrderPage.jsx
+   │
+   └─ svg
+      ├─ check.svg
+      ├─ logo-small.svg
+      └─ logo.svg
+
+```
+
+# 재활용 가능한 컴포넌트 구성
+
+1. 모든 페이지가 웹뷰로 구성되어 있어 WebViewLayout을 통해 `동일한 구조로 통일하여 유지보수성과 가독성을 높이려 노력`하였습니다.
+
+2. complete, error, NotFound `3개의 페이지가 아래의 공통점을 가지고 있어 하나의 MessageDisplay 컴포넌트를 만들어 재활용`하였습니다.
+
+   - 각 페이지 중간에 동일한 형태의 텍스트를 표시합니다.
+   - 접속 후 3초 뒤에 특정 URL로 이동합니다.
+
+3. 각 주문 아이템은 동일한 형태로 구성되어 있어 OrderListItem 컴포넌트를 만들어 재활용하였습니다.
+
+# 추가로 구현한 부분
+
+- [x] 잘못된 주소를 입력할 경우 처리 : 3초 후 home(/)으로 이동
+
+  - ![잘못된 주소 처리 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/ea074244-c7d0-4c67-b45c-ceb64559ebdd)
+
+- [x] 데이터를 받아올 때 문제 생긴경우 처리 - react-query를 사용하여 실패시 3번의 재요청 후 잘못된 페이지 구현
+
+  - ![데이터를 받아올 때 문제 생긴경우 처리 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/af5694b4-d0e1-48b1-8643-1156c72768fa)
+
+- [x] 다양한 기기 환경에 대응
+  - 다른 모바일의 경우 350px로 문제없지만, Galaxy Fold의 경우 짤려서 보이는 문제가 발생
+  - ![Galaxy Fold 수정 전 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/d7bf8871-f268-4372-b260-b9b03f393da7)
+  - 따라서 위와 같은 문제를 해결
+  - ![Galaxy Fold 수정 후 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/97d60b15-3822-41fe-bc65-3077e990f6e3)
