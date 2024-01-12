@@ -123,3 +123,8 @@ second-frontend-project
 - <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/d7bf8871-f268-4372-b260-b9b03f393da7' width="300px" height='300px' />
 - 따라서 위와 같은 문제를 해결
 - <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/97d60b15-3822-41fe-bc65-3077e990f6e3' width="300px" height='300px' />
+
+- [x] 주문 후 3초뒤에 /order 페이지로 오면 화면이 상단에 위치하지 않는 불편함 발생
+- <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/00ffe0bc-cbd2-4362-998c-ca96b4d1af34' width="300px" height='300px' />
+- 따라서 위와 같은 문제를 해결
+- <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/a34e7031-d1cf-4c02-859f-feda787de63e' width="300px" height='300px' />
