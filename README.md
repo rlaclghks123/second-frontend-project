@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# 요구사항
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 프로젝트 구성
 
-## Available Scripts
+- [x] Create React App을 사용해 세팅
+- [ ] 모바일 웹 기준으로 구현
+- [ ] 전역 상태 관리 라이브러리 사용 -> Recoil 선택
+- [ ] CSS-in-JS 사용 -> styled-component 사용
 
-In the project directory, you can run:
+### 홈
 
-### `npm start`
+- 버튼을 클릭하면 /order 페이지로 이동
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### order
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [ ] 로고가 있는 헤더는 상단에, 총 가격 및 주문하기 버튼이 있는 부분은 하단에 스크롤에 상관없이 고정되도록 만들어 주세요.
+- [ ] 페이지에 들어오면 바로 주문 아이템을 불러와 주세요.
+- [ ] 주문 아이템을 불러오는 요청의 로딩 표시를 해주세요.
+- [ ] Counter를 활용해 주문 아이템의 개수를 조작할 수 있게 구현해 주세요.
+  - [ ] 수량은 음수가 될 수 없습니다.
+  - [ ] 주문할 수 있는 최대 수량은 999개 입니다.
+  - [ ] 주문 아이템의 개수를 조작할 때, 각 아이템의 가격과 하단 총 가격, 하단 총 수량이 맞게 변해야 합니다.
+  - [ ] 주문 아이템의 합계 수량이 0일 때는 주문할 수 없습니다.
+  - [ ] 수량이 1 이상인 아이템의 배경색을 바꿔 주세요.
+  - [ ] 주문하기 클릭 후 로딩 중인 상태를 하단 버튼에 표시해 주세요.
 
-### `npm test`
+### complete, error
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] complete
+  - [ ] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
+- [ ] error
+  - [ ] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
 
-### `npm run build`
+# 요구사항 선택
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 적절하게 컴포넌트를 나누어 주세요.
+- Typescript를 사용하셔도 됩니다. => react로만 구성
