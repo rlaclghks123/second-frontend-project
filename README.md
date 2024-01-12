@@ -4,7 +4,7 @@
 
 - [x] Create React App을 사용해 세팅
 - [x] CSS-in-JS 사용 -> styled-component 사용
-- [ ] 모바일 웹 기준으로 구현
+- [x] 모바일 웹 기준으로 구현
 - [ ] 전역 상태 관리 라이브러리 사용 -> Recoil 선택
 
 ### 홈
