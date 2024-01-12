@@ -3,7 +3,7 @@ import MessageDisplay from '../components/MessageDisplay';
 
 function ErrorPage() {
   return (
-    <MessageDisplay>
+    <MessageDisplay redirectUrl={'/order'}>
       <Section>주문에 실패하였습니다.</Section>
       <Section>다시 시도해주세요.</Section>
     </MessageDisplay>

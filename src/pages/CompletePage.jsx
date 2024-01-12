@@ -4,7 +4,7 @@ import checkSvg from '../svg/check.svg';
 
 function CompletePage() {
   return (
-    <MessageDisplay>
+    <MessageDisplay redirectUrl={'/order'}>
       <Section>
         <img src={checkSvg} alt="check Img" />
       </Section>

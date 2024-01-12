@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import WebViewLayout from '../layout/WebViewLayout';
 
-function MessageDisplay({ children }) {
+function MessageDisplay({ redirectUrl, children }) {
   const navigate = useNavigate();
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      navigate('/order');
+      navigate(redirectUrl);
     }, 3000);
 
     return () => clearTimeout(timeoutId);
