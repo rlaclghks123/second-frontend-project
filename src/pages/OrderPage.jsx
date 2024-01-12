@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import logoSmallSvg from '../svg/logo-small.svg';
 import WebViewLayout from '../layout/WebViewLayout';
+import Header from '../components/Header';
 
 function OrderPage() {
   return (
     <WebViewLayout>
       <Wrapper>
-        <Header>
-          <Img src={logoSmallSvg} alt="logo Img" />
-        </Header>
+        <Header />
       </Wrapper>
     </WebViewLayout>
   );
@@ -23,20 +21,4 @@ const Wrapper = styled.div`
 
   width: inherit;
   height: inherit;
-`;
-
-const Header = styled.header`
-  position: fixed;
-  top: 1px;
-  z-index: 99;
-
-  width: 350px;
-  height: 57px;
-
-  flex-shrink: 0;
-  background: #000;
-`;
-
-const Img = styled.img`
-  margin: 12px;
 `;
