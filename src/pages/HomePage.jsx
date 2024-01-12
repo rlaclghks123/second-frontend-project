@@ -8,7 +8,7 @@ function HomePage() {
     <WebViewLayout>
       <Wrapper>
         <Main>
-          <img src={logoSvg} alt="logo Img" />
+          <Img src={logoSvg} alt="logo Img" />
           <Button to="/order">주문하러 가기</Button>
         </Main>
       </Wrapper>
@@ -40,17 +40,30 @@ const Main = styled.main`
   color: white;
 `;
 
+const Img = styled.img`
+  width: 150px;
+  height: 51px;
+  flex-shrink: 0;
+`;
+
 const Button = styled(Link)`
-  padding: 25px;
-  margin: 25px;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  color: #000000;
-  background-color: white;
+  width: 172px;
+  height: 88px;
+  flex-shrink: 0;
 
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 30.26px;
+  margin-top: 41px;
+  border-radius: 20px;
+  background: #fff;
+  color: #000;
+
   text-align: center;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
