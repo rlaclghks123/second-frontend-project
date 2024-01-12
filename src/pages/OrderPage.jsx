@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import WebViewLayout from '../layout/WebViewLayout';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function OrderPage() {
   return (
@@ -8,6 +9,7 @@ function OrderPage() {
       <Wrapper>
         <Header />
       </Wrapper>
+      <Footer />
     </WebViewLayout>
   );
 }
