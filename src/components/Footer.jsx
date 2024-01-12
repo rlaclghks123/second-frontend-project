@@ -51,6 +51,10 @@ function Footer({ orderState }) {
 export default Footer;
 
 const FooterWrapper = styled.footer`
+  @media (max-width: 350px) {
+    width: 280px;
+  }
+
   position: fixed;
   bottom: 0px;
   box-sizing: border-box;
@@ -86,6 +90,10 @@ const OrderSummary = styled.div`
 `;
 
 const Button = styled.button`
+  @media (max-width: 350px) {
+    width: 240px;
+  }
+
   width: 301px;
   height: 47.919px;
   flex-shrink: 0;

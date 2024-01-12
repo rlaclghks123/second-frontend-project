@@ -17,6 +17,10 @@ const Wrapper = styled.div`
 `;
 
 const CenterContentBox = styled.div`
+  @media (max-width: 350px) {
+    width: 280px;
+  }
+
   width: 350px;
   min-height: 864px;
   background-color: white;
