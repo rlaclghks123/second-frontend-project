@@ -48,6 +48,10 @@ table {
 body{
 	background-color: #eaeaea;
 }
+
+a{
+	text-decoration: none;
+}
 `;
 
 export default GlobalStyle;
