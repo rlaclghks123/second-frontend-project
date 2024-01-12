@@ -1,16 +1,39 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-function Footer() {
+function Footer({ orderState }) {
+  const [totalCnt, setTotalCnt] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [isPayment, setIsPayment] = useState(false);
+
+  useEffect(() => {
+    setTotalCnt(() => orderState.map((item) => item.materialType).reduce((a, c) => a + c, 0));
+    setTotalPrice(() => {
+      const priceList = orderState.map((item) => item.price);
+      const cntList = orderState.map((item) => item.materialType);
+
+      return priceList.reduce((a, c, idx) => a + c * cntList[idx], 0);
+    });
+  }, [orderState]);
+
+  useEffect(() => {
+    setIsPayment(() => {
+      return totalCnt === 0 ? true : false;
+    });
+  }, [totalPrice]);
+
   return (
     <FooterWrapper>
       <OrderSummary>
-        <p>{`총 수량 : ${0}개`}</p>
+        <p>{`총 수량 : ${totalCnt}개`}</p>
       </OrderSummary>
       <OrderSummary>
-        <p>{`총 가격 : ${0}원`}</p>
+        <p>{`총 가격 : ${totalPrice.toLocaleString()}원`}</p>
       </OrderSummary>
       <div>
-        <Button>주문하기</Button>
+        <Button $isPayment={isPayment} disabled={isPayment} onClick={() => console.log('oerder')}>
+          주문하기
+        </Button>
       </div>
     </FooterWrapper>
   );
@@ -62,6 +85,7 @@ const Button = styled.button`
 
   margin-top: 18.46px;
   border: none;
-  background: #c1c1c1;
   color: white;
+  background-color: ${(props) => (props.$isPayment ? '#c1c1c1' : '#000000')};
+  cursor: ${(props) => (props.$isPayment ? 'not-allowed' : 'pointer')};
 `;

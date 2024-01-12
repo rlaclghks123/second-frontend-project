@@ -16,8 +16,6 @@ function OrderPage() {
     onSuccess: (data) => setOrderState(data),
   });
 
-  console.log(orderState);
-
   return (
     <WebViewLayout>
       <Wrapper>
@@ -47,7 +45,7 @@ function OrderPage() {
           )}
         </Main>
       </Wrapper>
-      <Footer />
+      <Footer orderState={orderState} />
     </WebViewLayout>
   );
 }
