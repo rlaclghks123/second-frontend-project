@@ -26,8 +26,8 @@
 
 ### complete, error
 
-- [ ] complete
-  - [ ] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
+- [x] complete
+  - [x] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
 - [ ] error
   - [ ] 3초 뒤에 다시 /order 페이지로 돌아가야 합니다.
 
