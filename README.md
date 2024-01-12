@@ -100,15 +100,13 @@ second-frontend-project
 # 추가로 구현한 부분
 
 - [x] 잘못된 주소를 입력할 경우 처리 : 3초 후 home(/)으로 이동
-
-  - ![잘못된 주소 처리 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/ea074244-c7d0-4c67-b45c-ceb64559ebdd)
+- <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/ea074244-c7d0-4c67-b45c-ceb64559ebdd' width="300px" height='300px' />
 
 - [x] 데이터를 받아올 때 문제 생긴경우 처리 - react-query를 사용하여 실패시 3번의 재요청 후 잘못된 페이지 구현
-
-  - ![데이터를 받아올 때 문제 생긴경우 처리 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/af5694b4-d0e1-48b1-8643-1156c72768fa)
+- <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/af5694b4-d0e1-48b1-8643-1156c72768fa' width="300px" height='300px' />
 
 - [x] 다양한 기기 환경에 대응
-  - 다른 모바일의 경우 350px로 문제없지만, Galaxy Fold의 경우 짤려서 보이는 문제가 발생
-  - ![Galaxy Fold 수정 전 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/d7bf8871-f268-4372-b260-b9b03f393da7)
-  - 따라서 위와 같은 문제를 해결
-  - ![Galaxy Fold 수정 후 이미지](https://github.com/rlaclghks123/second-frontend-project/assets/55423198/97d60b15-3822-41fe-bc65-3077e990f6e3)
+- 다른 모바일의 경우 350px로 문제없지만, Galaxy Fold의 경우 짤려서 보이는 문제가 발생
+- <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/d7bf8871-f268-4372-b260-b9b03f393da7' width="300px" height='300px' />
+- 따라서 위와 같은 문제를 해결
+- <img src='https://github.com/rlaclghks123/second-frontend-project/assets/55423198/97d60b15-3822-41fe-bc65-3077e990f6e3' width="300px" height='300px' />
