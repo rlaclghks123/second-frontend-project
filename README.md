@@ -80,7 +80,8 @@ second-frontend-project
    │  ├─ Footer.jsx
    │  ├─ Header.jsx
    │  ├─ MessageDisplay.jsx
-   │  └─ OrderItem.jsx
+   │  ├─ OrderItem.jsx
+   |  └- ScrollToTop.jsx
    │
    ├─ layout
    │  └─ WebViewLayout.jsx
