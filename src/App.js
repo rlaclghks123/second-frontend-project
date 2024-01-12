@@ -4,10 +4,12 @@ import OrderPage from './pages/OrderPage';
 import CompletePage from './pages/CompletePage';
 import ErrorPage from './pages/ErrorPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path={'/'} element={<HomePage />} />
         <Route path={'/order'} element={<OrderPage />} />
